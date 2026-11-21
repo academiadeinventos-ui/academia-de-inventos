@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia de Inventos | Cursos Online en Vivo - Crea el Futuro con Tecnología</title>
+<meta name="description" content="Academia de Inventos: Cursos online en vivo de programación de videojuegos, gemelos digitales, mano biónica, tecnología asistiva e IA para niños. ¡Desarrolla tu proyecto digital! $29.990">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0A0F1E;--navy2:#111827;--cyan:#00E5CC;--purple:#7C3AED;--orange:#FF6B35;--pink:#FF2E93;--yellow:#FFC700}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--navy);color:#fff;overflow-x:hidden;line-height:1.6}
+h1,h2,h3{font-family:'Poppins',sans-serif}
+a{text-decoration:none;color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+/* HEADER */
+header{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,15,30,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}
+.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--cyan),var(--purple));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(0,229,204,0.4)}
+.logo span{color:var(--cyan)} .logo em{font-style:normal;color:#fff}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:500;opacity:0.9}
+.btn-wsp{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;padding:10px 20px;border-radius:30px;font-weight:700;display:flex;align-items:center;gap:8px;box-shadow:0 4px 18px rgba(37,211,102,0.4);transition:0.3s}
+.btn-wsp:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,0.6)}
+.btn-hero{background:linear-gradient(135deg,var(--orange),#FF3B30);padding:16px 32px;border-radius:32px;font-weight:800;font-size:16px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 8px 30px rgba(255,107,53,0.5);transition:0.3s}
+.btn-hero:hover{transform:translateY(-3px) scale(1.02)}
+.btn-outline{border:2px solid rgba(255,255,255,0.3);padding:14px 28px;border-radius:32px;font-weight:700;display:inline-flex;gap:8px;backdrop-filter:blur(6px);transition:0.3s}
+.btn-outline:hover{background:rgba(255,255,255,0.1)}
+/* HERO */
+.hero{padding:130px 0 60px;background:radial-gradient(1200px 600px at 20% -10%, rgba(124,58,237,0.35), transparent 70%), radial-gradient(900px 500px at 95% 20%, rgba(0,229,204,0.25), transparent 70%), linear-gradient(180deg,#0A0F1E 0%, #0F1A33 100%);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:60px;right:-100px;width:600px;height:600px;background:radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);border-radius:50%;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,229,204,0.12);border:1px solid rgba(0,229,204,0.3);padding:8px 16px;border-radius:30px;font-size:13px;font-weight:600;color:var(--cyan);margin-bottom:18px}
+.badge .dot{width:8px;height:8px;background:#25D366;border-radius:50%;box-shadow:0 0 0 6px rgba(37,211,102,0.15);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.hero h1{font-size:48px;line-height:1.05;font-weight:800;margin-bottom:16px}
+.hero h1 span.gradient{background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.sub{color:rgba(255,255,255,0.75);font-size:18px;margin-bottom:28px;max-width:560px}
+.hero-stats{display:flex;gap:18px;margin-top:30px;flex-wrap:wrap}
+.stat{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:14px 18px;border-radius:16px;display:flex;gap:12px;align-items:center;min-width:160px}
+.stat b{font-size:20px;display:block;line-height:1} .stat span{font-size:12px;opacity:0.7}
+.hero-visual{position:relative}
+.hero-card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03));border:1px solid rgba(255,255,255,0.12);border-radius:24px;padding:14px;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+.hero-img{width:100%;height:360px;object-fit:cover;border-radius:16px;display:block}
+.hero-float{position:absolute;background:#fff;color:#0A0F1E;padding:12px 16px;border-radius:16px;display:flex;gap:10px;align-items:center;box-shadow:0 12px 30px rgba(0,0,0,0.3);font-weight:700;font-size:13px}
+.float-1{top:18px;left:-18px} .float-2{bottom:22px;right:-14px}
+.float-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px}
+/* TRUST BAR */
+.trust{background:#fff;color:#0A0F1E;padding:18px 0;text-align:center}
+.trust-inner{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;align-items:center;font-weight:700;font-size:14px}
+.trust-item{display:flex;align-items:center;gap:8px}
+.trust-item i{width:36px;height:36px;background:#0A0F1E;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px}
+/* SECTION */
+section{padding:70px 0}
+.section-head{text-align:center;max-width:700px;margin:0 auto 44px}
+.kicker{color:var(--cyan);font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px}
+.section-head h2{font-size:38px;line-height:1.1;margin-bottom:14px}
+.section-head p{color:rgba(255,255,255,0.65);font-size:16px}
+/* CURSOS */
+.cursos{background:linear-gradient(180deg,#0F1A33 0%, #0A0F1E 100%)}
+.grid-cursos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:20px;overflow:hidden;transition:0.35s;position:relative}
+.card:hover{transform:translateY(-8px);border-color:rgba(0,229,204,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,229,204,0.15)}
+.card-img-wrap{position:relative;height:200px;overflow:hidden}
+.card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:0.4s}
+.card:hover img{transform:scale(1.08)}
+.card-tag{position:absolute;top:12px;left:12px;background:rgba(10,15,30,0.85);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);padding:6px 12px;border-radius:20px;font-size:11px;font-weight:800;letter-spacing:0.05em;display:flex;align-items:center;gap:6px}
+.tag-dot{width:8px;height:8px;border-radius:50%}
+.card-price-badge{position:absolute;top:12px;right:12px;background:var(--yellow);color:#0A0F1E;padding:6px 12px;border-radius:20px;font-weight:900;font-size:13px}
+.card-body{padding:18px 18px 20px}
+.card-body h3{font-size:17px;line-height:1.3;margin-bottom:8px;min-height:44px}
+.card-body p{font-size:13.5px;color:rgba(255,255,255,0.62);margin-bottom:14px;min-height:58px}
+.card-meta{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.meta-pill{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.08);padding:6px 10px;border-radius:20px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:5px}
+.card-btn{width:100%;background:#fff;color:#0A0F1E;padding:12px;border-radius:12px;font-weight:800;font-size:14px;display:flex;justify-content:center;align-items:center;gap:8px;transition:0.3s;border:none;cursor:pointer}
+.card-btn:hover{background:var(--cyan)}
+.card.featured{border:2px solid var(--orange);transform:scale(1.02)}
+.card.featured::after{content:"★ MÁS POPULAR";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--orange),#FF3B30);color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:900;letter-spacing:0.06em;box-shadow:0 6px 18px rgba(255,107,53,0.5)}
+/* BENEFICIOS */
+.benef{background:#0A0F1E}
+.benef-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.benef-card{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:24px;text-align:center}
+.benef-icon{width:56px;height:56px;margin:0 auto 14px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff}
+.benef-card h4{font-size:15px;margin-bottom:6px} .benef-card p{font-size:13px;color:rgba(255,255,255,0.6)}
+/* COMO FUNCIONA */
+.steps{background:#0F1A33;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:26px;position:relative;overflow:hidden}
+.step-num{position:absolute;top:16px;right:16px;font-size:42px;font-weight:900;opacity:0.07;line-height:1}
+.step h4{font-size:16px;margin-bottom:8px} .step p{font-size:13px;color:rgba(255,255,255,0.65)}
+/* TESTIMONIOS */
+.testis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testi{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:22px}
+.testi-head{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--cyan));display:flex;align-items:center;justify-content:center;font-weight:800}
+.stars{color:var(--yellow);font-size:14px}
+.testi p{font-size:13.5px;color:rgba(255,255,255,0.7);font-style:italic}
+/* OFERTA */
+.oferta{background:linear-gradient(135deg,#7C3AED 0%, #4F46E5 50%, #00B8A9 100%);padding:60px 0;position:relative;overflow:hidden}
+.oferta::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 20% 50%, rgba(255,255,255,0.15), transparent 70%)}
+.oferta-box{background:rgba(255,255,255,0.1);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.2);border-radius:24px;padding:34px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:30px;align-items:center;position:relative}
+.price-big{font-size:54px;font-weight:900;line-height:1} .price-big small{font-size:16px;font-weight:600;opacity:0.9}
+.price-old{text-decoration:line-through;opacity:0.7;font-size:18px}
+.oferta ul{list-style:none;display:grid;gap:10px;margin-top:16px}
+.oferta ul li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:500}
+.oferta ul li span{width:24px;height:24px;background:#fff;color:#7C3AED;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900}
+/* FAQ */
+.faq{max-width:800px;margin:0 auto}
+.faq-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:18px 20px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:700;font-size:15px}
+.faq-a{padding:0 20px 18px;color:rgba(255,255,255,0.65);font-size:13.5px;display:none}
+.faq-item.open .faq-a{display:block} .faq-item.open{background:rgba(255,255,255,0.06)}
+/* FOOTER */
+footer{background:#060A14;border-top:1px solid rgba(255,255,255,0.08);padding:40px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;margin-bottom:30px}
+.footer-grid h4{font-size:14px;margin-bottom:14px;color:var(--cyan)}
+.footer-grid p,.footer-grid a{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7}
+.footer-grid a:hover{color:#fff}
+.newsletter{display:flex;gap:8px;margin-top:12px}
+.newsletter input{flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:12px 16px;border-radius:12px;color:#fff;outline:none}
+.newsletter button{background:var(--cyan);color:#0A0F1E;border:none;padding:12px 18px;border-radius:12px;font-weight:800;cursor:pointer}
+.copy{border-top:1px solid rgba(255,255,255,0.08);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(255,255,255,0.4)}
+/* WHATSAPP FLOAT */
+.wsp-float{position:fixed;bottom:22px;right:22px;z-index:99;background:#25D366;color:#fff;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 30px rgba(37,211,102,0.5);animation:wspPulse 2s infinite;cursor:pointer}
+@keyframes wspPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.wsp-tooltip{position:fixed;bottom:90px;right:22px;background:#fff;color:#0A0F1E;padding:12px 16px;border-radius:14px;font-size:13px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:98;max-width:220px}
+.wsp-tooltip::after{content:"";position:absolute;bottom:-8px;right:20px;width:12px;height:12px;background:#fff;transform:rotate(45deg)}
+/* RESPONSIVE */
+@media(max-width:1024px){.grid-cursos{grid-template-columns:repeat(2,1fr)} .benef-grid{grid-template-columns:repeat(2,1fr)} .steps-grid,.testis{grid-template-columns:1fr} .oferta-box{grid-template-columns:1fr} .footer-grid{grid-template-columns:1fr 1fr} .hero-grid{grid-template-columns:1fr} .hero h1{font-size:40px} .hero-img{height:300px}}
+@media(max-width:640px){.grid-cursos{grid-template-columns:1fr} .benef-grid{grid-template-columns:1fr} .nav-links span{display:none} .hero h1{font-size:32px} .footer-grid{grid-template-columns:1fr} .trust-inner{gap:16px} .hero-stats{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <div class="logo-icon">🚀</div>
+      <div>ACADEMIA <span>DE</span> <em>INVENTOS</em></div>
+    </div>
+    <div class="nav-links">
+      <span><a href="#cursos">Cursos</a> • <a href="#beneficios">Beneficios</a> • <a href="#faq">FAQ</a></span>
+      <a class="btn-wsp" href="https://wa.me/56951327157?text=Hola%20Academia%20de%20Inventos%20%F0%9F%9A%80%20quiero%20info%20del%20curso%20por%20$29.990" target="_blank">💬 Escríbenos al WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge"><span class="dot"></span> ¡CLASES EN VIVO ONLINE! • CUPOS LIMITADOS 2025</div>
+      <h1>Aprende a <span class="gradient">crear tecnología</span> que cambia el mundo</h1>
+      <p class="sub">5 cursos prácticos donde <b style="color:#fff">desarrollas tu propio proyecto digital</b> desde cero. Sin experiencia previa. Para niños, jóvenes y adultos creativos.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn-hero" href="https://wa.me/56951327157?text=Hola%20quiero%20inscribirme%20a%20Academia%20de%20Inventos%20por%20$29.990" target="_blank">🎓 Inscribirme por $29.990 →</a>
+        <a class="btn-outline" href="#cursos">▶ Ver todos los cursos</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div style="font-size:22px">🔴</div><div><b>En vivo por Zoom</b><span>Interactivo + grabaciones</span></div></div>
+        <div class="stat"><div style="font-size:22px">💻</div><div><b>Proyecto digital real</b><span>Te llevas tu creación</span></div></div>
+        <div class="stat"><div style="font-size:22px">🏆</div><div><b>Certificado</b><span>Academia de Inventos</span></div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <img class="hero-img" src="assets/curso-videojuegos.jpg" alt="Cursos Academia de Inventos">
+        <div class="hero-float float-1"><div class="float-icon" style="background:var(--purple)">🎮</div><div>Programación de<br>Videojuegos</div></div>
+        <div class="hero-float float-2"><div class="float-icon" style="background:var(--cyan)">🦾</div><div>Mano Biónica<br><small style="opacity:0.6">Simulación 3D</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-inner">
+    <div class="trust-item"><i>✓</i> Curso en vivo modalidad online</div>
+    <div class="trust-item"><i>⚡</i> Desarrollas un proyecto digital</div>
+    <div class="trust-item"><i>💬</i> Soporte por WhatsApp +56 9 5132 7157</div>
+    <div class="trust-item"><i>🎁</i> Valor único $29.990 CLP</div>
+  </div>
+</div>
+
+<section id="cursos" class="cursos">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Elige tu aventura tecnológica</div>
+      <h2>5 cursos para convertirte en inventor</h2>
+      <p>Todos incluyen clases en vivo, materiales descargables, tutorías y tu proyecto digital terminado. <b style="color:var(--cyan)">$29.990 cada uno.</b></p>
+    </div>
+
+    <div class="grid-cursos">
+      <!-- 1 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="assets/curso-videojuegos.jpg" alt="Programación de Videojuegos">
+          <div class="card-tag"><span class="tag-dot" style="background:var(--cyan)"></span> NIVEL PRINCIPIANTE</div>
+          <div class="card-price-badge">$29.990</div>
+        </div>
+        <div class="card-body">
+          <h3>🎮 Programación de Videojuegos</h3>
+          <p>Crea tu primer videojuego 2D/3D desde cero. Aprende lógica, diseño de personajes, niveles y publica tu juego. ¡Sin saber programar antes!</p>
+          <div class="card-meta">
+            <span class="meta-pill">⏱ 8 clases en vivo</span>
+            <span class="meta-pill">👦 Desde 10 años</span>
+            <span class="meta-pill">🛠 Proyecto: tu videojuego</span>
+          </div>
+          <a class="card-btn" href="https://wa.me/56951327157?text=Hola%20me%20interesa%20el%20curso%20de%20PROGRAMACI%C3%93N%20DE%20VIDEOJUEGOS%20por%20$29.990%20-%20Academia%20de%20Inventos" target="_blank">Quiero este curso 💬</a>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="assets/curso-gemelos.jpg" alt="Gemelos Digitales">
+          <div class="card-tag"><span class="tag-dot" style="background:var(--purple)"></span> TECNOLOGÍA 4.0</div>
+          <div class="card-price-badge">$29.990</div>
+        </div>
+        <div class="card-body">
+          <h3>🏭 Desarrollo de Gemelos Digitales Simulados</h3>
+          <p>Aprende a crear réplicas virtuales de máquinas, ciudades y procesos. Visualiza datos en tiempo real con simulación 3D e IoT.</p>
+          <div class="card-meta">
+            <span class="meta-pill">⏱ 6 clases en vivo</span>
+            <span class="meta-pill">🔬 Intermedio</span>
+            <span class="meta-pill">🛠 Proyecto: gemelo digital</span>
+          </div>
+          <a class="card-btn" href="https://wa.me/56951327157?text=Hola%20me%20interesa%20el%20curso%20de%20GEMELOS%20DIGITALES%20por%20$29.990%20-%20Academia%20de%20Inventos" target="_blank">Quiero este curso 💬</a>
+        </div>
+      </div>
+      <!-- 3 FEATURED -->
+      <div class="card featured">
+        <div class="card-img-wrap">
+          <img src="assets/curso-mano-bionica.jpg" alt="Simulación Mano Biónica">
+          <div class="card-tag"><span class="tag-dot" style="background:var(--orange)"></span> MÁS ELEGIDO ⭐</div>
+          <div class="card-price-badge" style="background:#fff">$29.990</div>
+        </div>
+        <div class="card-body">
+          <h3>🦾 Simulación de Mano Biónica</h3>
+          <p>Diseña y simula una mano robótica en 3D. Aprende biomecánica, impresión 3D y electrónica básica. ¡Proyecto con impacto real!</p>
+          <div class="card-meta">
+            <span class="meta-pill">⏱ 8 clases en vivo</span>
+            <span class="meta-pill">🤖 Robótica</span>
+            <span class="meta-pill">🛠 Proyecto: mano biónica 3D</span>
+          </div>
+          <a class="card-btn" style="background:linear-gradient(135deg,var(--orange),#FF3B30);color:#fff" href="https://wa.me/56951327157?text=Hola%20me%20interesa%20el%20curso%20de%20MANO%20BI%C3%93NICA%20por%20$29.990%20-%20Academia%20de%20Inventos" target="_blank">¡Lo quiero! 🚀</a>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="assets/curso-asistiva.jpg" alt="Tecnología Asistiva">
+          <div class="card-tag"><span class="tag-dot" style="background:#25D366"></span> IMPACTO SOCIAL</div>
+          <div class="card-price-badge">$29.990</div>
+        </div>
+        <div class="card-body">
+          <h3>♿ Introducción a la Tecnología Asistiva</h3>
+          <p>Descubre cómo la tecnología ayuda a personas con discapacidad. Crea apps, dispositivos y soluciones inclusivas con empatía e innovación.</p>
+          <div class="card-meta">
+            <span class="meta-pill">⏱ 6 clases en vivo</span>
+            <span class="meta-pill">❤️ Con propósito</span>
+            <span class="meta-pill">🛠 Proyecto: dispositivo asistivo</span>
+          </div>
+          <a class="card-btn" href="https://wa.me/56951327157?text=Hola%20me%20interesa%20el%20curso%20de%20TECNOLOG%C3%8DA%20ASISTIVA%20por%20$29.990%20-%20Academia%20de%20Inventos" target="_blank">Quiero este curso 💬</a>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="assets/curso-enciclopedia.jpg" alt="IA Enciclopedias Interactivas">
+          <div class="card-tag"><span class="tag-dot" style="background:var(--pink)"></span> CON IA GENERATIVA</div>
+          <div class="card-price-badge">$29.990</div>
+        </div>
+        <div class="card-body">
+          <h3>📚 IA para Crear Enciclopedias Interactivas para Niños</h3>
+          <p>Usa Inteligencia Artificial para crear enciclopedias 3D, con voz, quizzes y animaciones. Ideal para educadores, padres y creadores.</p>
+          <div class="card-meta">
+            <span class="meta-pill">⏱ 6 clases en vivo</span>
+            <span class="meta-pill">🧠 IA + Educación</span>
+            <span class="meta-pill">🛠 Proyecto: tu enciclopedia</span>
+          </div>
+          <a class="card-btn" href="https://wa.me/56951327157?text=Hola%20me%20interesa%20el%20curso%20de%20IA%20PARA%20ENCICLOPEDIAS%20por%20$29.990%20-%20Academia%20de%20Inventos" target="_blank">Quiero este curso 💬</a>
+        </div>
+      </div>
+      <!-- PACK -->
+      <div class="card" style="background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(0,229,204,0.15));border:1px solid rgba(124,58,237,0.3)">
+        <div class="card-img-wrap" style="background:linear-gradient(135deg,#7C3AED,#00E5CC);display:flex;align-items:center;justify-content:center">
+          <div style="text-align:center;padding:20px">
+            <div style="font-size:48px">🎁</div><div style="font-weight:900;font-size:22px">PACK 5 CURSOS</div><div style="opacity:0.9;font-size:13px">Lleva todo + mentoría 1 a 1</div>
+          </div>
+          <div class="card-price-badge" style="background:var(--yellow)">OFERTA</div>
+        </div>
+        <div class="card-body">
+          <h3>🔥 Pack Academia Completa</h3>
+          <p>Los 5 cursos + certificado premium + mentoría personalizada para tu proyecto final. ¡Conviértete en inventor completo!</p>
+          <div class="card-meta"><span class="meta-pill">🎓 5 certificados</span><span class="meta-pill">👨‍🏫 Mentoría incluida</span></div>
+          <a class="card-btn" style="background:linear-gradient(135deg,var(--purple),var(--cyan));color:#fff" href="https://wa.me/56951327157?text=Hola%20me%20interesa%20el%20PACK%205%20CURSOS%20de%20Academia%20de%20Inventos%20%C2%BFcu%C3%A1l%20es%20el%20precio%20pack?" target="_blank">Consultar Pack por WhatsApp 💬</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios" class="benef">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">¿Por qué Academia de Inventos?</div>
+      <h2>Aprendes haciendo, no solo mirando</h2>
+    </div>
+    <div class="benef-grid">
+      <div class="benef-card"><div class="benef-icon" style="background:linear-gradient(135deg,#FF6B35,#FF3B30)">🔴</div><h4>Curso 100% en vivo online</h4><p>Clases por Zoom interactivas, preguntas en tiempo real y grabaciones disponibles.</p></div>
+      <div class="benef-card"><div class="benef-icon" style="background:linear-gradient(135deg,#7C3AED,#4F46E5)">💻</div><h4>Desarrollas un proyecto digital</h4><p>Terminas con tu videojuego, gemelo, mano biónica o enciclopedia lista para mostrar.</p></div>
+      <div class="benef-card"><div class="benef-icon" style="background:linear-gradient(135deg,#00E5CC,#0099CC)">👨‍🏫</div><h4>Tutoría personalizada</h4><p>Soporte por WhatsApp +56951327157 y revisión de tu proyecto paso a paso.</p></div>
+      <div class="benef-card"><div class="benef-icon" style="background:linear-gradient(135deg,#FFC700,#FF8A00)">🏆</div><h4>Certificado + Portafolio</h4><p>Certificado oficial Academia de Inventos y proyecto para tu portafolio / CV.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="container">
+    <div class="section-head"><h2 style="font-size:32px">¿Cómo funciona?</h2></div>
+    <div class="steps-grid">
+      <div class="step"><div class="step-num">01</div><div style="font-size:28px;margin-bottom:10px">💬</div><h4>1. Escríbenos al WhatsApp</h4><p>Elige tu curso y envíanos un mensaje al <b>+56 9 5132 7157</b>. Te enviamos link de pago e inscripción en minutos.</p></div>
+      <div class="step"><div class="step-num">02</div><div style="font-size:28px;margin-bottom:10px">🎥</div><h4>2. Conéctate en vivo</h4><p>Recibe link de Zoom, materiales y acceso al grupo privado. Clases dinámicas, con cámara y micrófono.</p></div>
+      <div class="step"><div class="step-num">03</div><div style="font-size:28px;margin-bottom:10px">🚀</div><h4>3. Crea y presenta</h4><p>Desarrolla tu proyecto digital con nuestra guía y preséntalo en la demo final. ¡Queda tuyo para siempre!</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><div class="kicker">Lo que dicen nuestros inventores</div><h2>Historias reales</h2></div>
+    <div class="testis">
+      <div class="testi"><div class="testi-head"><div class="avatar">MF</div><div><b>Martina, 13 años</b><div class="stars">★★★★★</div></div></div><p>"Hice mi videojuego de plataformas en el primer curso. ¡Ahora mis amigos lo juegan! Los profes son muy pacientes y divertidos."</p><small style="opacity:0.5">— Programación de Videojuegos</small></div>
+      <div class="testi"><div class="testi-head"><div class="avatar">DR</div><div><b>Diego, papá de Tomás</b><div class="stars">★★★★★</div></div></div><p>"La enciclopedia interactiva con IA que hicimos para mi hijo es increíble. Aprende jugando y yo aprendí a usar IA educativa."</p><small style="opacity:0.5">— IA para Enciclopedias</small></div>
+      <div class="testi"><div class="testi-head"><div class="avatar">AL</div><div><b>Antonia, 17 años</b><div class="stars">★★★★★</div></div></div><p>"Simulé mi mano biónica y ahora quiero estudiar ingeniería biomédica. Nunca pensé que podría hacer algo así a mi edad."</p><small style="opacity:0.5">— Mano Biónica</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="oferta">
+  <div class="container">
+    <div class="oferta-box">
+      <div>
+        <div style="background:#fff;color:#7C3AED;display:inline-block;padding:6px 14px;border-radius:20px;font-weight:900;font-size:12px;letter-spacing:0.06em">⚡ OFERTA LANZAMIENTO • CUPOS LIMITADOS</div>
+        <h2 style="font-size:36px;margin:14px 0 6px">Invierte en tu futuro hoy</h2>
+        <p style="opacity:0.9">Cada curso incluye todo: clases en vivo + grabaciones + materiales + certificado + proyecto.</p>
+        <div style="display:flex;align-items:end;gap:16px;margin-top:18px;flex-wrap:wrap">
+          <div><div class="price-old">$59.990</div><div class="price-big">$29.990 <small>CLP</small></div><div style="font-size:12px;opacity:0.85">por curso • pago único • sin mensualidades</div></div>
+          <div style="background:var(--yellow);color:#0A0F1E;padding:8px 14px;border-radius:12px;font-weight:900">¡50% DESCUENTO!</div>
+        </div>
+        <a class="btn-hero" style="margin-top:20px;background:#fff;color:#7C3AED;box-shadow:0 8px 24px rgba(0,0,0,0.2)" href="https://wa.me/56951327157?text=Hola%20quiero%20aprovechar%20la%20OFERTA%20de%20$29.990%20Academia%20de%20Inventos%20🚀" target="_blank">💬 Inscribirme por WhatsApp ahora →</a>
+        <div style="font-size:12px;opacity:0.8;margin-top:10px">✓ Respuesta en < 5 min • ✓ Pago por transferencia / WebPay • ✓ Factura disponible</div>
+      </div>
+      <div>
+        <ul>
+          <li><span>✓</span> 6 a 8 clases en vivo por Zoom (1.5h c/u)</li>
+          <li><span>✓</span> Grabaciones + PDFs + plantillas</li>
+          <li><span>✓</span> Grupo WhatsApp de soporte directo</li>
+          <li><span>✓</span> Revisión personalizada de tu proyecto</li>
+          <li><span>✓</span> Certificado digital Academia de Inventos</li>
+          <li><span>✓</span> Demo Day final para presentar tu creación</li>
+          <li><span>✓</span> Garantía: si no te gusta la 1ra clase, te devolvemos 100%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head"><h2>Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <div class="faq-item open"><div class="faq-q">¿Necesito saber programar antes? <span>−</span></div><div class="faq-a">¡No! Todos los cursos parten desde cero. Te entregamos todo el software (gratuito) y te guiamos paso a paso. Ideal para principiantes y también para quienes quieren perfeccionarse.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Cómo son las clases en vivo online? <span>+</span></div><div class="faq-a">Son por Zoom en grupos pequeños (máx 15). Puedes preguntar, compartir pantalla y trabajar en equipo. Si no puedes asistir, quedan grabadas por 6 meses.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Qué necesito para participar? <span>+</span></div><div class="faq-a">Solo un computador con internet (Windows, Mac o Chromebook), audífonos y ganas de crear. Te enviamos la lista de programas gratuitos antes de iniciar.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Qué es el "proyecto digital"? <span>+</span></div><div class="faq-a">Cada curso termina con una creación tuya: tu videojuego jugable, tu gemelo digital, tu simulación de mano biónica, tu solución asistiva o tu enciclopedia con IA. Te queda para tu portafolio.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Cómo me inscribo y pago los $29.990? <span>+</span></div><div class="faq-a">¡Súper fácil! Haz clic en cualquier botón de WhatsApp que te lleva directo al +56 9 5132 7157. Nos dices qué curso quieres y te enviamos link de pago seguro (transferencia, WebPay o Flow).</div></div>
+      <div class="faq-item"><div class="faq-q">¿Entregan certificado? <span>+</span></div><div class="faq-a">Sí, certificado digital de Academia de Inventos con tu nombre, curso y horas. Perfecto para currículum, colegio o universidad.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px"><div class="logo-icon">🚀</div><div>ACADEMIA <span>DE</span> INVENTOS</div></div>
+        <p>Formamos a la próxima generación de inventores con tecnología, creatividad y propósito. Cursos en vivo modalidad online para Chile y Latam.</p>
+        <p style="margin-top:10px"><b style="color:#fff">📍 Concepción, Biobío — Chile</b><br>🌎 Clases online para todo Chile</p>
+      </div>
+      <div><h4>Cursos $29.990</h4><p><a href="#cursos">🎮 Programación Videojuegos</a><br><a href="#cursos">🏭 Gemelos Digitales</a><br><a href="#cursos">🦾 Simulación Mano Biónica</a><br><a href="#cursos">♿ Tecnología Asistiva</a><br><a href="#cursos">📚 IA Enciclopedias Niños</a></p></div>
+      <div><h4>Contacto directo</h4><p><a href="https://wa.me/56951327157" target="_blank" style="color:var(--cyan);font-weight:700">💬 WhatsApp: +56 9 5132 7157</a><br>✉️ hola@academiadeinventos.cl<br>🕘 Lun - Sáb 10:00 - 20:00<br><br><a href="https://wa.me/56951327157?text=Hola%20necesito%20ayuda%20con%20mi%20inscripci%C3%B3n" target="_blank" style="background:#25D366;color:#fff;padding:8px 14px;border-radius:20px;display:inline-block;margin-top:6px">Escríbenos ahora →</a></p></div>
+      <div><h4>¡Ofertas al WhatsApp!</h4><p>Déjanos tu número y te avisamos de nuevos cursos.</p><div class="newsletter"><input placeholder="Tu WhatsApp"><button>Enviar</button></div><p style="margin-top:10px;font-size:11px;opacity:0.5">Al enviar aceptas ser contactado por Academia de Inventos. Sin spam.</p></div>
+    </div>
+    <div class="copy"><span>© 2025 Academia de Inventos • Todos los derechos reservados • Hecho con 💚 en Concepción, Chile</span><span><a href="#">Términos</a> • <a href="#">Privacidad</a> • academia de inventos</span></div>
+  </div>
+</footer>
+
+<a class="wsp-float" href="https://wa.me/56951327157?text=Hola%20Academia%20de%20Inventos%20🚀%20quiero%20info%20de%20los%20cursos%20por%20$29.990" target="_blank" aria-label="WhatsApp">💬</a>
+<div class="wsp-tooltip">¿Dudas? ¡Escríbenos!<br><small style="opacity:0.7">Respuesta inmediata por WhatsApp</small></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open'); i.querySelector('span').textContent='+';});
+    if(!wasOpen){item.classList.add('open'); q.querySelector('span').textContent='−';}
+  });
+});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href');
+    if(id.length>1){e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+document.querySelector('.newsletter button')?.addEventListener('click',()=>{
+  const inp=document.querySelector('.newsletter input');
+  if(inp.value.trim().length>5){
+    window.open(`https://wa.me/56951327157?text=Hola%20quiero%20recibir%20ofertas%20de%20Academia%20de%20Inventos%20mi%20número%20es%20${encodeURIComponent(inp.value)}`,'_blank');
+    inp.value=''; inp.placeholder='¡Te escribiremos! ✅';
+  } else { inp.placeholder='Ingresa tu WhatsApp 📱'; inp.focus(); }
+});
+// ocultar tooltip después de 7s
+setTimeout(()=>{document.querySelector('.wsp-tooltip')?.style.setProperty('display','none')},7000);
+</script>
+</body>
+</html>
