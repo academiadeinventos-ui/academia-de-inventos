@@ -12,7 +12,7 @@ Sitio web oficial para vender **cursos online en vivo** de tecnología e innovac
 5. 📚 **IA para Crear Enciclopedias Interactivas para Niños** - Con IA generativa
 
 ### ✨ Características del Sitio
-- ✅ Curso 100% **en vivo modalidad online** (Zoom interactivo + grabaciones)
+- ✅ Curso 100% **en vivo modalidad online** (Meet interactivo + manual en PDF paso a paso)
 - ✅ **Desarrollas un proyecto digital** real en cada curso
 - ✅ Diseño moderno, responsive y llamativo (gradientes neón, glassmorphism)
 - ✅ Integración directa a **WhatsApp +56 9 51327157** en todos los botones
@@ -41,7 +41,7 @@ python3 -m http.server 8080
 ### 📲 Contacto & Ventas
 **Academia de Inventos** - Concepción, Chile 🇨🇱
 - WhatsApp: [+56 9 5132 7157](https://wa.me/56951327157)
-- Email: hola@academiadeinventos.cl
+- Email: academiadeinventos@gmail.com
 - Clases online para todo Chile y Latam
 
 ### 📄 Licencia
