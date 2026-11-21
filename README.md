@@ -2,7 +2,7 @@
 
 Sitio web oficial para vender **cursos online en vivo** de tecnología e innovación.
 
-**🌐 Demo:** `index.html` | **📱 WhatsApp:** +56 9 5132 7157 | **💰 Precio:** $29.990 CLP por curso
+**🌐 Demo:** `index.html` | **📱 WhatsApp:** +56 9 5132 6157 | **💰 Precio:** $29.990 CLP por curso
 
 ### 📚 Cursos Incluidos
 1. 🎮 **Programación de Videojuegos** - Crea tu videojuego 2D/3D desde cero
@@ -15,7 +15,7 @@ Sitio web oficial para vender **cursos online en vivo** de tecnología e innovac
 - ✅ Curso 100% **en vivo modalidad online** (Meet interactivo + manual en PDF paso a paso)
 - ✅ **Desarrollas un proyecto digital** real en cada curso
 - ✅ Diseño moderno, responsive y llamativo (gradientes neón, glassmorphism)
-- ✅ Integración directa a **WhatsApp +56 9 51327157** en todos los botones
+- ✅ Integración directa a **WhatsApp +56 9 51326157** en todos los botones
 - ✅ Imágenes generadas con IA, animaciones y testimonios
 - ✅ Oferta destacada $29.990 CLP
 - ✅ FAQ, beneficios y proceso en 3 pasos
@@ -40,7 +40,7 @@ python3 -m http.server 8080
 
 ### 📲 Contacto & Ventas
 **Academia de Inventos** - Concepción, Chile 🇨🇱
-- WhatsApp: [+56 9 5132 7157](https://wa.me/56951327157)
+- WhatsApp: [+56 9 5132 6157](https://wa.me/56951326157)
 - Email: academiadeinventos@gmail.com
 - Clases online para todo Chile y Latam
 
