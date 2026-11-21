@@ -366,7 +366,7 @@ footer{background:#060A14;border-top:1px solid rgba(255,255,255,0.08);padding:40
       </div>
       <div><h4>Cursos $29.990</h4><p><a href="#cursos">🎮 Programación Videojuegos</a><br><a href="#cursos">🏭 Gemelos Digitales</a><br><a href="#cursos">🦾 Simulación Mano Biónica</a><br><a href="#cursos">♿ Tecnología Asistiva</a><br><a href="#cursos">📚 IA Enciclopedias Niños</a></p></div>
       <div><h4>Contacto directo</h4><p><a href="https://wa.me/56951326157" target="_blank" style="color:var(--cyan);font-weight:700">💬 WhatsApp: +56 9 5132 6157</a><br>✉️ academiadeinventos@gmail.com<br><br><a href="https://wa.me/56951326157?text=Hola%20necesito%20ayuda%20con%20mi%20inscripci%C3%B3n" target="_blank" style="background:#25D366;color:#fff;padding:8px 14px;border-radius:20px;display:inline-block;margin-top:6px">Escríbenos ahora →</a></p></div>
-      <div><h4>¡Ofertas al WhatsApp!</h4><p>Déjanos tu número y te avisamos de nuevos cursos.</p><div class="newsletter"><input placeholder="Tu WhatsApp"><button>Enviar</button></div><p style="margin-top:10px;font-size:11px;opacity:0.5">Al enviar aceptas ser contactado por Academia de Inventos. Sin spam.</p></div>
+      <div><h4>¡Ofertas al WhatsApp!</h4><p>Déjanos un mensaje con tu número y te avisamos de nuevos cursos.</p><div class="newsletter"><input placeholder="Tu nombre y WhatsApp"><button>Enviar</button></div><p style="margin-top:10px;font-size:11px;opacity:0.5">Al enviar te contactaremos al correo academiadeinventos@gmail.com • Sin spam.</p></div>
     </div>
     <div class="copy"><span>© 2025 Academia de Inventos • Todos los derechos reservados • Hecho con 💚 en Chile</span><span><a href="#">Términos</a> • <a href="#">Privacidad</a> • academia de inventos</span></div>
   </div>
@@ -393,9 +393,11 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 document.querySelector('.newsletter button')?.addEventListener('click',()=>{
   const inp=document.querySelector('.newsletter input');
   if(inp.value.trim().length>5){
-    window.open(`https://wa.me/56951326157?text=Hola%20quiero%20recibir%20ofertas%20de%20Academia%20de%20Inventos%20mi%20número%20es%20${encodeURIComponent(inp.value)}`,'_blank');
-    inp.value=''; inp.placeholder='¡Te escribiremos! ✅';
-  } else { inp.placeholder='Ingresa tu WhatsApp 📱'; inp.focus(); }
+    const asunto=encodeURIComponent('Nuevo interesado - Academia de Inventos');
+    const cuerpo=encodeURIComponent(`Hola! Quiero recibir info de nuevos cursos.\n\nMis datos: ${inp.value}\n\nEnviado desde la web academiadeinventos-ui.github.io/academia-de-inventos`);
+    window.location.href=`mailto:academiadeinventos@gmail.com?subject=${asunto}&body=${cuerpo}`;
+    inp.value=''; inp.placeholder='¡Mensaje enviado! ✅ Te escribiremos pronto';
+  } else { inp.placeholder='Ingresa tu nombre y número 📱'; inp.focus(); }
 });
 // ocultar tooltip después de 7s
 setTimeout(()=>{document.querySelector('.wsp-tooltip')?.style.setProperty('display','none')},7000);
